@@ -9,7 +9,7 @@ export const HomePage = () => {
   useEffect(() => {
     const fetchAllTeams = async () => {
       const response = await fetch(
-        `http://localHost:8080/api/team`
+        `${process.env.REACT_APP_API_ROOT_URL}/team`
       );
       const data = await response.json();
       setTeams(data);
